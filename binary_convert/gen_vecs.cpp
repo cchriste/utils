@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cstdlib>
+
+int main(int argc,char**argv)
+{
+  if (argc < 3)
+  {
+    std::cout<<"Usage: gen_vecs <nvecs> <maxval>\n";
+    return -1;
+  }
+  unsigned nvecs=atol(argv[1]);
+  double maxv=atof(argv[2]);
+  double vec[3];
+  for (unsigned i=0;i<nvecs;i++)
+  {
+    vec[0]=maxv*(-0.5+drand48());
+    vec[1]=maxv*(-0.5+drand48());
+    vec[2]=maxv*(-0.5+drand48());
+    std::cout.write(reinterpret_cast<const char*>(vec),3*sizeof(double));
+  }
+  
+  return 0;
+}
