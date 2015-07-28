@@ -6,7 +6,7 @@ int main(int argc,char**argv)
   if (argc < 3)
   {
     std::cout<<"Usage: gen_vecs <nvecs> <maxval> [random_seed]\n";
-    std::cout<<"Example: gen_vecs 512 2000 `od -vAn -N4 -tu4 < /dev/urandom`";
+    std::cout<<"Example: gen_vecs 512 2000 `od -vAn -N4 -tu4 < /dev/urandom`\n";
     return -1;
   }
   if (argc > 3)
